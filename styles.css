@@ -7,6 +7,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    max-width: 100%;
+    overflowX: hidden;
+}
+
 /* Navigation Bar */
 
 nav {
@@ -19,6 +24,10 @@ img {
     height: 100%;
     max-height: 50vh;
     padding: 20px;
+}
+
+p {
+    line-height: 1.5;
 }
 
 .nav__container {
@@ -73,6 +82,9 @@ li {
 }
 
 #landing {
+    background-color: rgba(115, 66, 214, 0.1);
+}
+#explore {
     background-color: rgba(115, 66, 214, 0.1);
 }
 
@@ -132,14 +144,136 @@ button:active {
 }
 
 .container {
-padding: 56px 0;
+    padding: 56px 0;
 }
 
 .row {
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /*  HIGHLIGHTS */
 
+#highlights {
+    position: relative;
+}
+
+#highlights:after,
+#highlights:before {
+    background: url(assets/wave.svg);
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 101vw;
+    height: 12vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+#highlights:before {    
+    top: 2px;
+    transform: translateY(-100%);
+}
+
+#highlights::after {
+    transform: translateY(100%) rotate(180deg);
+    bottom: 2px;
+}
+
+.highlight__wrapper {
+    display: flex;
+    z-index: 2;
+}
+
+.highlight {
+    padding: 0 24px;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.highlight__para {
+    text-align: center;
+    max-width: 280px;
+}
+
+.highlight__img {
+    border: 2px solid #7342d6;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 4px;
+    font-size: 32px;
+}
+
+.highlight__subtitle {
+    margin:16px 0;
+    font-size: 20px;
+}
+
+/* 
+
+FEATURES
+
+*/
+
+#features {
+    padding-top: 8vw;
+    background-color: rgba(115, 66, 214, 0.1);
+}
+
+.books {
+    display: flex;
+}
+.latest__books {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 25%;
+    padding: 24px;
+}
+
+.book__img {
+    max-height: 380px;
+    transition: all 300ms;
+cursor: not-allowed;
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book:hover .book__img {
+    transform: scale(1.03);
+}
+
+.book__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover {
+    cursor: not-allowed;
+}
+
+.book__ratings {
+    margin-bottom: 8px;
+color: #fabf2a;
+}
+
+.book__price--normal {
+    text-decoration: line-through;
+padding-right: 6px;
+color: #bfbfbf;
+}
