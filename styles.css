@@ -256,8 +256,8 @@ button:active {
     content: "";
     position: absolute;
     left: 0;
-    width: 101vw;
-    height: 12vw;
+    width: 100vw;
+    height:12vw;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
